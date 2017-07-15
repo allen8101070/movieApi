@@ -1,0 +1,56 @@
+* {
+  font-family: 微軟正黑體;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+h1 {
+  text-shadow: 0px 2px #000;
+}
+
+body {
+  height: 1000px;
+}
+nav.navbar.navbar-default.navbar-fixed-top.mynav{
+  font-size: 18px;
+  transition: 0.5s;
+  font-weight: 900;
+  background-color: #000;
+  border:none;
+}
+nav.navbar-default .navbar-nav>li>a, nav.navbar-default .navbar-brand{
+  color: #fff;
+}
+nav.navbar.navbar-default.navbar-fixed-top a:hover{
+	color: red;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top {
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top a {
+  color: #fff;
+  font-size: 18px;
+  transition: 0.5s;
+}
+nav.navbar.navbar-default.navbar-fixed-top.navbar-top a:hover {
+  color: #014ea0;
+}
+
+
+/*jumbotron先暫時寫在這*/
+header.jumbotron {
+  text-align: center;
+  background-image: url();
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+  height: 600px;
+  background-color: green;
+}
+header.jumbotron .container {
+  color: #fff;
+  padding: 200px 0px;
+}

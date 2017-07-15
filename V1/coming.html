@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>即將上映</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/myIndexNav.css">
+	<link rel="stylesheet" href="./css/coming.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="./js/myIndexNav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+  	<script src="./js/coming.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top mynav navbar-top" role="navigation">
+		<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">選單切換</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">還沒想到LOGO</a>
+		</div>
+		<!-- 手機隱藏選單區 -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<!-- 右 -->
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="nowplaying.html">正在熱映</a></li>
+				<li><a href="usamovie.html">北美排行</a></li>
+				<li><a href="coming.html">即將上映</a></li>
+			</ul>
+		</div>
+		<!-- 手機隱藏選單區結束 -->
+		</div>
+	</nav>
+	
+	<div class="container mybox" id="app">
+  		<div class="row">
+    		<div class="col-sm-12">
+      			<h2>即將上映的電影</h2>
+    		</div>
+	    	<div class="col-xs-12 col-sm-4 col-md-3" v-for="movie in coming">
+	      		<a v-bind:href="'https://movie.douban.com/subject/'+movie.id" target="_blank">
+		        	<div class="myMovieCard">
+		          		<div class="myMovieImg">
+		            		<img v-bind:src="movie.images.large">
+		          		</div>
+		          		<p>{{movie.title}}</p>
+		          		<p>上映日期：{{movie.pubdate}}</p>
+		        	</div>
+	      		</a>
+	    	</div>
+  		</div>
+	</div>
+
+</body>
+</html>
