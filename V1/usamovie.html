@@ -44,7 +44,7 @@
       			<h2>北美電影排行榜</h2>
     		</div>
 	    	<div class="col-xs-12 col-sm-4 col-md-3" v-for="movie in usamovie">
-	      		<a v-bind:href="'https://movie.douban.com/subject/'+movie.id" target="_blank">
+	      		<a v-bind:href="'https://movie.douban.com/subject/'+movie.subject.id" target="_blank">
 		        	<div class="myMovieCard">
 		          		<div class="myMovieImg">
 		            		<img v-bind:src="movie.subject.images.large">
